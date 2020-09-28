@@ -1,0 +1,17 @@
+<resources>
+    <string name="app_name">Practica02</string>
+
+    <string name="texto_Nombre">Nombre</string>
+    <string name="texto_Apellidos">Apellidos</string>
+    <string name="texto_DNI">DNI</string>
+    <string name="texto_Direccion">Dirección</string>
+    <string name="texto_Celular">Celular</string>
+    <string name="boton_Capturar">Capturar Imagen</string>
+    <string name="boton_Mapa">Direccion Mapa</string>
+
+    <string name="edt_Nombre"></string>
+    <string name="edt_Apellidos"></string>
+    <string name="edt_DNI"></string>
+    <string name="edt_Direccion"></string>
+    <string name="edt_Celular"></string>
+</resources>

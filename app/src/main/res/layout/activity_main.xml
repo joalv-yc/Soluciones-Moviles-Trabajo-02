@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        tools:layout_editor_absoluteX="-47dp"
+        tools:layout_editor_absoluteY="-30dp">
+
+        <ImageView
+            android:id="@+id/imgUsuario"
+            android:layout_width="match_parent"
+            android:layout_height="157dp"
+            android:contentDescription="@string/boton_Capturar"
+            tools:srcCompat="@tools:sample/avatars" />
+
+        <Button
+            android:id="@+id/btnCapturar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/boton_Capturar"
+            android:textSize="12sp" />
+
+        <TextView
+            android:id="@+id/txtNombre"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="monospace"
+            android:text="@string/texto_Nombre"
+            android:textAlignment="center"
+            android:textSize="12sp" />
+
+        <EditText
+            android:id="@+id/edt_Nombre"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:fontFamily="monospace"
+            android:hint="Ejm: Joaquin"
+            android:inputType="textPersonName"
+            android:text="@string/edt_Nombre"
+            android:textAlignment="center"
+            android:textSize="12sp" />
+
+        <TextView
+            android:id="@+id/textView4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="monospace"
+            android:text="@string/texto_Apellidos"
+            android:textAlignment="center"
+            android:textSize="12sp" />
+
+        <EditText
+            android:id="@+id/edt_Apellidos"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:fontFamily="monospace"
+            android:hint="Ejm: Liendo Velásquez"
+            android:inputType="textPersonName"
+            android:text="@string/edt_Apellidos"
+            android:textAlignment="center"
+            android:textSize="12sp" />
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="monospace"
+            android:text="@string/texto_DNI"
+            android:textAlignment="center"
+            android:textSize="12sp" />
+
+        <EditText
+            android:id="@+id/edt_DNI"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:fontFamily="monospace"
+            android:hint="Ejm: 71230172"
+            android:inputType="textPersonName"
+            android:text="@string/edt_DNI"
+            android:textAlignment="center"
+            android:textSize="12sp" />
+
+        <TextView
+            android:id="@+id/textView5"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="monospace"
+            android:text="@string/texto_Direccion"
+            android:textAlignment="center"
+            android:textSize="12sp" />
+
+        <EditText
+            android:id="@+id/edt_Direccion"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:fontFamily="monospace"
+            android:hint="Ejm: Urb. Tacna I-16"
+            android:inputType="textPersonName"
+            android:text="@string/edt_Direccion"
+            android:textAlignment="center"
+            android:textSize="12sp" />
+
+        <Button
+            android:id="@+id/btn_Mapa"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/boton_Mapa"
+            android:textSize="12sp" />
+
+        <TextView
+            android:id="@+id/textView3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="monospace"
+            android:text="@string/texto_Celular"
+            android:textAlignment="center"
+            android:textSize="12sp" />
+
+        <EditText
+            android:id="@+id/edt_Celular"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:fontFamily="monospace"
+            android:hint="Ejm: 987065958"
+            android:inputType="textPersonName"
+            android:text="@string/edt_Celular"
+            android:textAlignment="center"
+            android:textSize="12sp" />
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
