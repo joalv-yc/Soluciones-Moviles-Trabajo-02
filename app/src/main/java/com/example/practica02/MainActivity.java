@@ -9,6 +9,7 @@ import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.graphics.Bitmap;
+import android.graphics.drawable.BitmapDrawable;
 import android.net.Uri;
 import android.os.Bundle;
 import android.provider.MediaStore;
@@ -28,6 +29,7 @@ public class MainActivity extends AppCompatActivity {
 
     public static final int CAMERA_PIC_REQUEST = 1; //Para el funcionamiento de la camara
     EditText ET_Nombre, ET_Apellidos, ET_DNI, ET_Direccion, ET_Celular;
+    ImageView foto;
     String[] direccion = new String[60];
 
     @Override
@@ -37,13 +39,6 @@ public class MainActivity extends AppCompatActivity {
 
         final TextView direccion = (TextView) findViewById(R.id.edt_Direccion);
 
-        ((Button) findViewById(R.id.btnCapturar)).setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent camaraIntent = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
-                startActivityForResult(camaraIntent, CAMERA_PIC_REQUEST);
-            }
-        });
 
         Button btn_Ubicar = (Button) findViewById(R.id.btn_Mapa);
         btn_Ubicar.setOnClickListener(new View.OnClickListener() {
@@ -54,6 +49,46 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(locationIntent);
             }
         });
+
+        Button botonGuardar = (Button)findViewById(R.id.btnGuardar);
+
+        ((Button) findViewById(R.id.btnCapturar)).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent camaraIntent = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
+                startActivityForResult(camaraIntent, CAMERA_PIC_REQUEST);
+            }
+        });
+
+        botonGuardar.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+                ET_Nombre = (EditText)findViewById(R.id.edt_Nombre);
+                ET_Apellidos = (EditText)findViewById(R.id.edt_Apellidos);
+                ET_DNI = (EditText)findViewById(R.id.edt_DNI);
+                ET_Direccion = (EditText)findViewById(R.id.edt_Direccion);
+                ET_Celular = (EditText)findViewById(R.id.edt_Celular);
+                foto = (ImageView)findViewById(R.id.imgUsuario);
+
+                Intent intent = new Intent(getApplicationContext(),Resultado.class);
+
+                Bitmap bitmap = ((BitmapDrawable)foto.getDrawable()).getBitmap();
+
+                getIntent().putExtra("danombre",ET_Nombre.getText().toString());
+                getIntent().putExtra("daapellidos",ET_Apellidos.getText().toString());
+                getIntent().putExtra("dadni",ET_DNI.getText().toString());
+                getIntent().putExtra("dadireccion",ET_Direccion.getText().toString());
+                getIntent().putExtra("dacelular",ET_Celular.getText().toString());
+                intent.putExtra("foto",bitmap);
+
+                intent.setType("/");
+                startActivity(intent);
+
+            }
+        });
+
+
     }
 
     @Override

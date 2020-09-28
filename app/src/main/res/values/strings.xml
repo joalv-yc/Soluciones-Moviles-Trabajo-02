@@ -8,10 +8,17 @@
     <string name="texto_Celular">Celular</string>
     <string name="boton_Capturar">Capturar Imagen</string>
     <string name="boton_Mapa">Direccion Mapa</string>
+    <string name="boton_Guardar">Guardar</string>
 
     <string name="edt_Nombre"></string>
     <string name="edt_Apellidos"></string>
     <string name="edt_DNI"></string>
     <string name="edt_Direccion"></string>
     <string name="edt_Celular"></string>
+
+
+
+
+
+
 </resources>
